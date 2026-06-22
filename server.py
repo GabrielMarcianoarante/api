@@ -68,7 +68,7 @@ def perguntar(body: PerguntaRequest, x_api_key: str | None = Header(default=None
     if not pergunta:
         raise HTTPException(status_code=400, detail="Campo 'pergunta' vazio.")
 
-    prompt = f"Resolva a seguinte questão: {pergunta}"
+    prompt = f"Resolva a questão como se fosse um inciante mas com certeza nao precisa explicar bote algums comentarios se quiser nao muitos mas comentarios estilo humano no codigo e se a questao pedir restrição tipo não pode usar def voce vai seguir a restrição ao todo custo: {pergunta}"
 
     tokens_estimados = None
     try:
